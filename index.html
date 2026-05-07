@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Login</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="auth-shell" aria-labelledby="login-title">
+      <section class="brand-panel" aria-label="Welcome message">
+        <div class="brand-mark" aria-hidden="true">L</div>
+        <h1>Welcome back</h1>
+        <p>Sign in to continue to your dashboard and manage your account securely.</p>
+      </section>
+
+      <section class="login-card">
+        <h2 id="login-title">Login to your account</h2>
+        <p class="muted">Enter your details below.</p>
+
+        <form id="login-form" novalidate>
+          <label for="email">Email address</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            autocomplete="email"
+            placeholder="you@example.com"
+            required
+          />
+
+          <label for="password">Password</label>
+          <div class="password-row">
+            <input
+              id="password"
+              name="password"
+              type="password"
+              autocomplete="current-password"
+              placeholder="Enter your password"
+              minlength="6"
+              required
+            />
+            <button class="toggle-password" type="button" aria-controls="password" aria-pressed="false">
+              Show
+            </button>
+          </div>
+
+          <div class="form-options">
+            <label class="checkbox-label">
+              <input type="checkbox" name="remember" />
+              Remember me
+            </label>
+            <a href="#" aria-label="Reset password">Forgot password?</a>
+          </div>
+
+          <p id="form-message" class="form-message" role="status" aria-live="polite"></p>
+
+          <button class="submit-button" type="submit">Sign in</button>
+        </form>
+
+        <p class="signup-copy">Don't have an account? <a href="#">Create one</a></p>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
